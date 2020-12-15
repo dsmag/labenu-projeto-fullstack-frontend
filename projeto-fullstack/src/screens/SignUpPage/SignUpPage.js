@@ -1,10 +1,18 @@
 import React from 'react'
+import SignUpForm from './SignUpForm'
+import useChangePageTitle from '../../hooks/useChangePageTitle'
+import {PageContainer} from './styled'
+import { Typography } from '@material-ui/core'
 
-const SignUpPage = () => {
+
+const SignUpPage = (props) => {
+    useChangePageTitle("Cadastro")
+
     return (
-        <div>
-            PÁGINA DE SIGNUP
-        </div>
+        <PageContainer>
+            <Typography color={"primary"} align={"center"}>Cadastro</Typography>
+            <SignUpForm setButtonName={props.setButtonName} />
+        </PageContainer>
     )
 }
 
