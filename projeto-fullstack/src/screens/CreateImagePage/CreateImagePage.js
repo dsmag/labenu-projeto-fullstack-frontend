@@ -9,7 +9,6 @@ import CreateImageForm from './CreateImageForm'
 const CreateImagePage = () => {
     useProtectedPage()
     useChangePageTitle("Adicionar imagem")
-    const history = useHistory()
 
     return (
         <PageContainer>
