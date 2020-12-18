@@ -13,3 +13,7 @@ export const goToFeedPage = (history) => {
 export const goToDetailPage = (history, id) => {
     history.push(`/feed/${id}`)
 }
+
+export const goToAddImagePage = (history) => {
+    history.push(`/feed/add-image`)
+}

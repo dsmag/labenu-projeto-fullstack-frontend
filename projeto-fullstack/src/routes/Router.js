@@ -5,6 +5,7 @@ import SignUpPage from '../screens/SignUpPage/SignUpPage'
 import FeedPage from '../screens/FeedPage/FeedPage'
 import DetailPage from '../screens/DetailPage/DetailPage'
 import ErrorPage from '../screens/ErrorPage/ErrorPage'
+import CreateImagePage from '../screens/CreateImagePage/CreateImagePage'
 
 const Router = (props) => {
     return (
@@ -17,6 +18,9 @@ const Router = (props) => {
             </Route>
             <Route exact path={['/feed', '/']} >
                 <FeedPage />
+            </Route>
+            <Route exact path={'/feed/add-image'} >
+                <CreateImagePage />
             </Route>
             <Route exact path={'/feed/:id'} >
                 <DetailPage />

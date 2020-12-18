@@ -56,7 +56,6 @@ const SignUpForm = (props) => {
         if (isValid) {
             if (form.password === confirmPassword) {
                 signUp(form, history, props.setButtonName, setIsLoading)
-                console.log(form)
             } else {
                 alert("Senhas diferentes.")
             }
@@ -108,7 +107,7 @@ const SignUpForm = (props) => {
                     variant={"outlined"}
                     type={showPassword ? 'text' : 'password'}          
                     required
-                    minLength={"6"}                
+                    inputProps={{ minLength: 6 }}                
                     fullWidth
                     endAdornment={
                     <InputAdornment position="end">
@@ -161,7 +160,6 @@ const SignUpForm = (props) => {
             >
                 {isLoading ? <CircularProgress color={'inherit'} size={24}/> : <>CADASTRAR</>}
             </Button>
-
         </FormContainer>        
     )
 }

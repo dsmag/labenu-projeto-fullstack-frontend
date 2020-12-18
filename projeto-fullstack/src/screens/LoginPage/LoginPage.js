@@ -1,7 +1,7 @@
 import React from 'react'
 import LoginForm from './LoginForm'
 import useChangePageTitle from '../../hooks/useChangePageTitle'
-// import useUnprotectedPage from '../../hooks/useUnprotectedPage'
+import useUnprotectedPage from '../../hooks/useUnprotectedPage'
 import {PageContainer} from './styled'
 import { Button, Typography } from '@material-ui/core'
 import { useHistory } from 'react-router-dom'
@@ -9,7 +9,8 @@ import { goToSignUpPage } from '../../routes/Coordinator'
 
 const LoginPage = (props) => {
     useChangePageTitle("Login")
-    // useUnprotectedPage()
+    useUnprotectedPage()
+    
     const history = useHistory()
 
     return (

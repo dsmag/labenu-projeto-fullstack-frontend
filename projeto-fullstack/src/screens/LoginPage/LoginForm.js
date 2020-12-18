@@ -43,12 +43,10 @@ const LoginForm = (props) => {
         element.reportValidity()
         if (isValid) {
             login(form, history, props.setButtonName, setIsLoading)
-            console.log(form)
         }
     }
 
-    return (
-        
+    return (        
         <FormContainer id={"login_form"}>
             <TextField 
                 value={form.emailOrNickname}
